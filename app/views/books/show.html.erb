@@ -43,7 +43,7 @@
           <% end %>
         </tr>
       </table>
-      <%= form_with model: [@book, @book_comment] ,method: :post do |f| %>
+      <%= form_with model: [@book, @book_comment], method: :post do |f| %>
             <%= f.text_area :comment, rows: '5'%>
             <%= f.submit "送信する" %>
       <% end %>
