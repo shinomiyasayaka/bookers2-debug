@@ -6,12 +6,11 @@ Rails.application.routes.draw do
   get "/search", to: "searches#search"
 
   resources :books, only: [:index,:show,:edit,:create,:destroy,:update,:new]do
-    resource :favorite, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
     resources :book_comments, only: [:create, :destroy]
   end
 
   resources :users, only: [:index,:show,:edit,:update]do
-    resource :favorite, only: [:create, :destroy]
     resource :relationships, only: [:create, :destroy]
         get "followings" => "relationships#followings", as: "followings"
         get "followers" => "relationships#followers", as: "followers"
