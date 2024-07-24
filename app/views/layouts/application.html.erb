@@ -10,6 +10,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
     <header>
@@ -17,11 +18,11 @@
     </header>
     <main>
       <p id="notice"><%= notice %></p>
-      
+
       <div class="d-flex justify-content-center mb-2">
           <%= render "searches/form" %>
         </div>
-        
+
       <%= yield %>
     </main>
     <footer>
